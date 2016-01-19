@@ -1,2 +1,2 @@
-# hsexperiments
-Haskell Experiments
+# Haskell Experiments
+Haskell Experiments.
