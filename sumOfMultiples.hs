@@ -3,3 +3,9 @@
 
 sumOfMultiples::Int->Int->Int->Int->Int
 sumOfMultiples min max m1 m2 = sum[x | x <- [min..max], x `mod` m1 == 0 || x `mod` m2 == 0]
+
+sumOfMultiplesRecursive::Int->Int->Int->Int->Int
+sumOfMultiplesRecursive min max m1 m2
+	| min > max = 0
+	| min `mod` m1 == 0 || min `mod` m2 == 0 = min + sumOfMultiplesRecursive (min + 1) max m1 m2
+	| otherwise = sumOfMultiplesRecursive (min + 1) max m1 m2
